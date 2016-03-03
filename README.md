@@ -15,6 +15,6 @@ MegaSpark Plugins
     <tbody>
         <tr>
             <td>stats.lua</td>
-            <td>Plugin to manage Supergroups.Get Settings</td>
+            <b>Plugin to manage Supergroups.Get Settings</b>
         </tr>
         <tr>
