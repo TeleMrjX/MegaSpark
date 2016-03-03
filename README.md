@@ -20,7 +20,7 @@ MegaSpark Plugins
         <tr>
 
 # Installion
-''bash''
+'''bash
 cd #HOME
 git clone http://github.com/SWATCHTEAM/MegaSpark.git
 cd MegaSpark
