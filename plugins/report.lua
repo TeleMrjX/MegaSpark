@@ -1,18 +1,5 @@
---------------------------------------------------
---      ____  ____ _____                        --
---     |    \|  _ )_   _|___ ____   __  __      --
---     | |_  )  _ \ | |/ ·__|  _ \_|  \/  |     --
---     |____/|____/ |_|\____/\_____|_/\/\_|     --
---                                              --
---------------------------------------------------
---                                              --
---       Developers: @Josepdal & @MaSkAoS       --
---     Support: @Skneos,  @iicc1 & @serx666     --
---                                              --
---------------------------------------------------
-
 local function send_report(msg)
-    local text = '👤 '..lang_text(msg.to.id, 'reportUser')..': '..msg.from.username..' ('..msg.from.id..')\n‼ '..lang_text(msg.to.id, 'reportReason')..': Spam\n💬 '..lang_text(msg.to.id, 'reportGroup')..': "'..msg.to.title..'" ('..msg.to.id..')\n✉ '..lang_text(msg.to.id, 'reportMessage')..': '..msg.text
+    local text = 'The USER: '..msg.from.username..' ['..msg.from.id..']\nReported Reason: Spaming\nThe User Spammed IN': "'..msg.to.title..'" ['..msg.to.id..']\n'.Reaport Message '..msg.text
     for v,user in pairs(_config.sudo_users) do
         send_msg('user#id'..user, text, ok_cb, true)
     end
