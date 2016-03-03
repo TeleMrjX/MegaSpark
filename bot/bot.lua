@@ -3,11 +3,8 @@ package.path = package.path .. ';.luarocks/share/lua/5.2/?.lua'
 package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
 
 require("./bot/utils")
-require("./bot/permissions")
 
-local f = assert(io.popen('/usr/bin/git describe --tags', 'r'))
-VERSION = assert(f:read('*a'))
-f:close()
+VERSION = '0.14.6'
 
 -- This function is called when tg receive a msg
 function on_msg_receive (msg)
@@ -25,7 +22,7 @@ function on_msg_receive (msg)
     msg = pre_process_msg(msg)
     if msg then
       match_plugins(msg)
-      mark_read(receiver, ok_cb, false)
+      --mark_read(receiver, ok_cb, false)
     end
   end
 end
@@ -39,8 +36,6 @@ function on_binlog_replay_end()
   -- See plugins/isup.lua as an example for cron
 
   _config = load_config()
-
-  _gbans = load_gbans()
 
   -- load plugins
   plugins = {}
@@ -138,9 +133,13 @@ local function is_plugin_disabled_on_chat(plugin_name, receiver)
     -- Checks if plugin is disabled on this chat
     for disabled_plugin,disabled in pairs(disabled_chats[receiver]) do
       if disabled_plugin == plugin_name and disabled then
-        local warning = 'Plugin '..disabled_plugin..' is disabled on this chat'
-        print(warning)
-        send_msg(receiver, warning, ok_cb, false)
+        if plugins[disabled_plugin].hidden then
+            print('Plugin '..disabled_plugin..' is disabled on this chat')
+        else
+            local warning = 'Plugin '..disabled_plugin..' is disabled on this chat'
+            print(warning)
+            send_msg(receiver, warning, ok_cb, false)
+        end
         return true
       end
     end
@@ -187,11 +186,6 @@ function save_config( )
   print ('saved config into ./data/config.lua')
 end
 
-function save_gbans( )
-  serialize_to_file(_gbans, './data/gbans.lua')
-  print ('saved gban into ./data/gbans.lua')
-end
-
 -- Returns the config from config.lua file.
 -- If file doesn't exist, create it.
 function load_config( )
@@ -210,42 +204,18 @@ function load_config( )
   return config
 end
 
-function load_gbans( )
-  local f = io.open('./data/gbans.lua', "r")
-  -- If gbans.lua doesn't exist
-  if not f then
-    print ("Created new gbans file: data/gbans.lua")
-    create_gbans()
-  else
-    f:close()
-  end
-  local gbans = loadfile ("./data/gbans.lua")()
-  return gbans
-end
-
 -- Create a basic config.json file and saves it.
 function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-      "report"
-     },
+      "plugins",},
     sudo_users = {109722284},
-    admin_users = {},
-    disabled_channels = {}
+    disabled_channels = {},
     moderation = {data = 'data/moderation.json'}
   }
   serialize_to_file(config, './data/config.lua')
   print ('saved config into ./data/config.lua')
-end
-
-function create_gbans( )
-  -- A simple config with basic plugins and ourselves as privileged user
-  gbans = {
-    gbans_users = {}
-  }
-  serialize_to_file(gbans, './data/gbans.lua')
-  print ('saved gbans into ./data/gbans.lua')
 end
 
 function on_our_id (id)
@@ -285,6 +255,7 @@ function load_plugins()
   end
 end
 
+-- custom add
 function load_data(filename)
 
 	local f = io.open(filename)
