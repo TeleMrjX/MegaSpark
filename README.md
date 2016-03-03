@@ -60,17 +60,27 @@ Developer : [ArashSpark](http://telegram.me/ArashSpark)
 #**[Our Channel](http://telegram.me/SWATCHTEAM) :**
 
 1-[International](http://telegram.me/SWATCHTEAM)
-2-[Arabic](http://telegram.me/SWATCHAR)
+
+2-[Arabic](telegram.me/SWATCHAr)
+
 3-[Persian](http://telegram.me/SWATCH)
+
 ==========================================
 #My TEAM
 
 1-[Leader | Arash](HTTP://telegram.me/ArashSpark)
+
 2-[Mouamle](http://telegram.me/Mouamle)
+
 3-[Ashkan](http://telegram.me/DigitalBoys)
+
 4-[MehranLion](http://telegram.me/Mehran_hpr)
+
 5-[Shervin](http://telegram.me/EnderWitch)
+
 6-[HAMODI](http://telegram.me/ii00ii)
+
 7-[Mehran](http://telegram.me/Joker_admin1)
+
 8-[MehrPouya](http://telegram.me/MehrPouyaGamer_is_dead)
 
