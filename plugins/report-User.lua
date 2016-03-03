@@ -1,7 +1,7 @@
 local function send_report(msg)
-    local text = 'The USER: '..msg.from.username..' ['..msg.from.id..']\nReported Reason: Spaming\nThe User Spammed IN': "'..msg.to.title..'" ['..msg.to.id..']\n'.Reaport Message '..msg.text
+    local report = 'The USER: '..msg.from.username..' ['..msg.from.id..']\nReported Reason: Spaming\nThe User Spammed IN': "'..msg.to.title..'" ['..msg.to.id..']\n'.Reaport Message '..msg.text
     for v,user in pairs(_config.sudo_users) do
-        send_msg('user#id'..user, text, ok_cb, true)
+        send_msg('user#id'..user, report, ok_cb, true)
     end
 end
 
