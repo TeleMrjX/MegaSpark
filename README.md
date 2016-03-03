@@ -47,14 +47,30 @@ cd tg && make && cd ..
 sudo service redis-server start
 ./launch.sh # Will ask you for a phone number & confirmation code.
 ```
-Developer : [ArashSpark](telegram.me/ArashSpark)
+Developer : [ArashSpark](http://telegram.me/ArashSpark)
 
 
 #Spicial Thanks TO
-[Imandaneshi](telegram.me/imandaneshi)
+[Imandaneshi](http://telegram.me/imandaneshi)
 
-[Rondoozle](telegram.me/Rondoozle)
+[Rondoozle](Http://telegram.me/Rondoozle)
 
-[Shervin](telegram.me/EnderWItch)
+[Shervin](http://telegram.me/EnderWItch)
 
-**[Our Channel](telegram.me/SWATCHTEAM) :**
+#**[Our Channel](http://telegram.me/SWATCHTEAM) :**
+
+1-[International](http://telegram.me/SWATCHTEAM)
+2-[Arabic](http://telegram.me/SWATCHAR)
+3-[Persian](http://telegram.me/SWATCH)
+==========================================
+#My TEAM
+
+1-[Leader | Arash](HTTP://telegram.me/ArashSpark)
+2-[Mouamle](http://telegram.me/Mouamle)
+3-[Ashkan](http://telegram.me/DigitalBoys)
+4-[MehranLion](http://telegram.me/Mehran_hpr)
+5-[Shervin](http://telegram.me/EnderWitch)
+6-[HAMODI](http://telegram.me/ii00ii)
+7-[Mehran](http://telegram.me/Joker_admin1)
+8-[MehrPouya](http://telegram.me/MehrPouyaGamer_is_dead)
+
