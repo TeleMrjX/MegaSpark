@@ -18,6 +18,8 @@ MegaSpark Plugins
             <td>Plugin to manage Supergroups.Get Settings</td>
         </tr>
         <tr>
+         </tbody>
+</table>
 
 [Installation](https://github.com/yagop/telegram-bot/wiki/Installation)
 ------------
