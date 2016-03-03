@@ -21,7 +21,7 @@ MegaSpark Plugins
 
 # Installion
 '''bash
-cd #HOME
+# cd #HOME
 git clone http://github.com/SWATCHTEAM/MegaSpark.git
 cd MegaSpark
 git submodule update--recursive
@@ -29,3 +29,4 @@ cd tg && make && cd ..
 sudo service redis-server start
 ./launch.sh install
 ./launch.sh # Will Ask You a Phone Number And Send Code
+''''
