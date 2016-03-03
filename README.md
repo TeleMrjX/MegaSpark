@@ -21,6 +21,12 @@ MegaSpark Plugins
          </tbody>
 </table>
 
+#WARNING 
+
+This BOT Is Under Development
+This It at Your Own Risk
+
+
 [Installation](https://github.com/yagop/telegram-bot/wiki/Installation)
 ------------
 
@@ -41,3 +47,14 @@ cd tg && make && cd ..
 sudo service redis-server start
 ./launch.sh # Will ask you for a phone number & confirmation code.
 ```
+Developer : [ArashSpark](telegram.me/ArashSpark)
+
+
+#Spicial Thanks TO
+[Imandaneshi](telegram.me/imandaneshi)
+
+[Rondoozle](telegram.me/Rondoozle)
+
+[Shervin](telegram.me/EnderWItch)
+
+**[Our Channel](telegram.me/SWATCHTEAM) :**
