@@ -228,26 +228,12 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-      "bot",
-      "commands",
-      "english_lang",
-      "export_gban",
-      "giverank",
-      "id",
-      "moderation",
-      "plugins",
-      "persian_lang",
-      "settings",
-      "spam",
-      "spanish_lang",
-      "version",
-      "italian_lang",
-      "portuguese_lang",
-      "arabic"
+      "report"
      },
-    sudo_users = {our_id},
+    sudo_users = {109722284},
     admin_users = {},
     disabled_channels = {}
+    moderation = {data = 'data/moderation.json'}
   }
   serialize_to_file(config, './data/config.lua')
   print ('saved config into ./data/config.lua')
@@ -297,6 +283,29 @@ function load_plugins()
     end
 
   end
+end
+
+function load_data(filename)
+
+	local f = io.open(filename)
+	if not f then
+		return {}
+	end
+	local s = f:read('*all')
+	f:close()
+	local data = JSON.decode(s)
+
+	return data
+
+end
+
+function save_data(filename, data)
+
+	local s = JSON.encode(data)
+	local f = io.open(filename, 'w')
+	f:write(s)
+	f:close()
+
 end
 
 -- Call and postpone execution for cron plugins
