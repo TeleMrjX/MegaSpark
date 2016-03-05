@@ -8,6 +8,9 @@ MegaSpark Plugins
 <table>
     <thead>
         <tr>
+        <center>
+        Mega SPARK Plugins Usage
+        </center>
             <td><strong>Plugin Name</strong></td>
             <td><strong>Description</strong></td>
         </tr>
