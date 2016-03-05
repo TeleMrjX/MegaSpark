@@ -20,8 +20,8 @@ MegaSpark Plugins
         <tr>
         
          </tb<tr>
-            <td>stats.lua</td>
-            <td>Plugin to manage Supergroups.Get Settings</td>
+            <td>Delete-Message.lua</td>
+            <td>Plugins To Delete Message In Supergroups</td>
         </tr>
         <tr>
         </body>
